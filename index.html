@@ -3,266 +3,511 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#170c27">
-<title>لفاطيما، من زياد بكل الحب ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100819">
+<title>إلى فاطيما، أجمل هدايا الدنيا ✨</title>
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap');
+
+:root{
+  --gold:#ffdfa0;
+  --pink:#ffacd4;
+  --purple:#c8a6ff;
+  --text:#fff8ff;
+  --muted:#ddcce9;
+  --glass:rgba(255,255,255,.065);
+}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
- margin:0;color:#fff7ff;font-family:Arial,sans-serif;
- background:radial-gradient(circle at top,#51275f,#170c27 65%,#0d0717);
- min-height:100vh;overflow-x:hidden
+  margin:0;
+  background:#100819;
+  color:var(--text);
+  font-family:'Cairo',Arial,sans-serif;
+  overflow-x:hidden;
 }
-button,input{font:inherit}
+button,input,textarea{font:inherit}
 button{cursor:pointer}
-.gold{color:#ffdfa0}
-.muted{color:#e3d4ee;line-height:2}
-#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
-.star{position:absolute;color:#fff;animation:twinkle 2s infinite alternate}
-@keyframes twinkle{to{opacity:.2;transform:scale(.6)}}
-#lock{
- position:fixed;inset:0;z-index:10;display:flex;
- align-items:center;justify-content:center;text-align:center;padding:22px;
- background:radial-gradient(circle at top,#60336e,#11091d 75%)
+button:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--gold);outline-offset:3px
 }
-.card{
- width:100%;max-width:440px;padding:28px 22px;
- border:1px solid #ffdfa05c;border-radius:26px;
- background:#ffffff09;box-shadow:0 0 45px #d68bff16
+#sky{
+  position:fixed;inset:0;overflow:hidden;
+  pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,#482052 0%,transparent 55%),
+    radial-gradient(ellipse at 100% 70%,#2a1746 0%,transparent 48%),
+    #100819;
 }
-.gift{font-size:65px;animation:float 3s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-9px)}}
-h1,h2{line-height:1.6}
-input{
- width:100%;padding:15px;border-radius:14px;
- border:1px solid #ffdfa0;background:#170d25;
- color:white;text-align:center;letter-spacing:5px;margin:12px 0
+.star{
+  position:absolute;color:#fff;
+  animation:twinkle 2.5s ease-in-out infinite alternate;
 }
+@keyframes twinkle{to{opacity:.15;transform:scale(.6)}}
+#app{position:relative;z-index:1;display:none}
+button{transition:transform .2s,filter .2s}
+button:active{transform:scale(.96)}
+.gold{color:var(--gold)}
+.pink{color:var(--pink)}
+.muted{color:var(--muted);line-height:2}
+.small{font-size:13px;color:#cbb8d7;line-height:1.9}
 .btn{
- border:0;border-radius:30px;padding:13px 21px;
- background:linear-gradient(110deg,#ffe5a4,#f5a9d0);
- color:#301432;font-weight:bold;margin:5px;
- box-shadow:0 5px 22px #f5a9d02a
+  border:0;border-radius:28px;padding:13px 21px;margin:5px;
+  background:linear-gradient(110deg,#ffe6ad,#f4add6);
+  color:#30152f;font-weight:800;
+  box-shadow:0 5px 24px #f4add622;
 }
-.btn:active{transform:scale(.97)}
-#main{display:none;position:relative}
-section{max-width:760px;margin:auto;padding:35px 18px;text-align:center}
-.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.btn.secondary{
+  background:#ffffff0b;color:#fff;border:1px solid #ffdfa064;
+  box-shadow:none;
+}
+.btn.full{width:100%;margin:8px 0}
+#lock{
+  position:fixed;inset:0;z-index:50;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;text-align:center;
+  background:radial-gradient(ellipse at 50% 15%,#603267,#100819 72%);
+}
+.lock-card{
+  width:100%;max-width:390px;padding:30px 23px;
+  border:1px solid #ffdfa070;border-radius:30px;
+  background:#ffffff08;box-shadow:0 0 65px #d9a0ff15;
+}
+.lock-icon{font-size:68px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+#password{
+  width:100%;padding:15px;border-radius:14px;
+  border:1px solid #ffdfa0;background:#170d23;color:white;
+  text-align:center;letter-spacing:5px;margin:12px 0;
+}
+#err{color:#ffb4d0;min-height:22px;font-size:13px}
+section{width:min(820px,100%);margin:auto;padding:36px 18px}
+.hero{
+  min-height:96svh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+}
+.eyebrow{letter-spacing:3px;font-size:11px;color:var(--gold)}
 .hero h1{
- font-size:clamp(34px,9vw,60px);
- background:linear-gradient(100deg,#ffe9ac,#ffacd5,#d4b4ff);
- -webkit-background-clip:text;background-clip:text;color:transparent
+  font-size:clamp(39px,10vw,72px);
+  line-height:1.45;margin:12px 0;
+  background:linear-gradient(110deg,#fff0b9,#ffb5da,#d5bbff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.heart{font-size:68px;animation:beat 1.4s infinite}
-@keyframes beat{50%{transform:scale(1.12)}}
+.hero p{max-width:540px}
+.crown{font-size:36px}
+.heart{
+  font-size:70px;
+  filter:drop-shadow(0 0 25px #ff8cc7);
+  animation:heartbeat 1.5s infinite;
+}
+@keyframes heartbeat{50%{transform:scale(1.12)}}
+.scroll-hint{font-size:12px;color:#d1bdda;margin-top:28px}
 .panel{
- text-align:right;padding:24px 19px;margin:15px auto;
- border:1px solid #ffffff20;border-radius:23px;
- background:#ffffff09;line-height:2
+  padding:24px 20px;margin:16px 0;
+  border:1px solid #ffffff1e;border-radius:25px;
+  background:linear-gradient(145deg,#ffffff0c,#ffffff04);
+  box-shadow:0 16px 40px #00000015;
 }
-.panel h2{text-align:center;color:#ffdfa0}
-.letter{font-size:18px;line-height:2.1;white-space:pre-line}
-#part2{display:none}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.giftbox{padding:18px 9px;border:1px solid #ffffff20;border-radius:19px;background:#ffffff08}
-.giftbox .emoji{font-size:35px}
-.giftbox p{font-size:14px;line-height:1.9}
-.hidden{display:none}
-footer{text-align:center;padding:30px 15px;color:#cbb8d7}
-.floaty{position:fixed;bottom:-30px;pointer-events:none;z-index:20;animation:rise 3s linear forwards}
-@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
-@media(max-width:540px){.grid{grid-template-columns:1fr}.letter{font-size:17px}section{padding:28px 14px}}
+.panel h2{text-align:center;color:var(--gold);line-height:1.7}
+.panel p{line-height:2}
+.letter{
+  font-family:'Amiri',Georgia,serif;
+  font-size:21px;line-height:2.15;white-space:pre-line;
+  color:#fff0fb;
+}
+.letter-part{display:none}
+.section-title{text-align:center;font-size:clamp(25px,6vw,36px)}
+.section-sub{text-align:center;line-height:2;color:var(--muted)}
+.progress{
+  height:4px;border-radius:5px;background:#ffffff15;
+  margin:18px 0;overflow:hidden;
+}
+#progressBar{height:100%;width:0;background:linear-gradient(90deg,#ffacd4,#ffdfa0);transition:width .4s}
+.grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;
+}
+.tile{
+  padding:21px 13px;border:1px solid #ffffff20;
+  border-radius:22px;background:#ffffff08;text-align:center;
+}
+.tile .emoji{font-size:40px}
+.tile h3{color:var(--pink);margin:8px 0}
+.tile p{line-height:1.9;font-size:14px;color:var(--muted)}
+.hidden-message{
+  display:none;padding:13px;margin-top:13px;
+  border-radius:15px;border:1px solid #ffdfa035;
+  background:#ffdfa009;color:#fff0f9;line-height:2;
+}
+#capsuleResult{display:none}
+textarea{
+  display:block;width:100%;min-height:90px;resize:vertical;
+  border:1px solid #ffffff30;background:#160d24;color:white;
+  border-radius:16px;padding:13px;margin:15px 0;
+}
+#finale{
+  display:none;position:fixed;inset:0;z-index:100;
+  overflow:auto;padding:24px;
+  background:#100819f5;align-items:center;justify-content:center;
+  text-align:center;
+}
+.final-card{width:100%;max-width:520px;margin:auto}
+.final-card h1{
+  font-size:clamp(37px,10vw,60px);line-height:1.5;color:var(--gold)
+}
+footer{text-align:center;padding:35px 18px 45px;color:#cbb8d7;font-size:13px;line-height:2}
+.floaty{
+  position:fixed;bottom:-35px;z-index:120;pointer-events:none;
+  animation:rise 3.5s linear forwards;
+}
+@keyframes rise{
+  to{transform:translateY(-110svh) rotate(35deg);opacity:0}
+}
+#musicBar{
+  position:fixed;bottom:12px;left:12px;z-index:20;
+  display:none;align-items:center;gap:8px;
+  border:1px solid #ffdfa04a;border-radius:28px;
+  background:#21132eea;padding:7px 12px;
+  box-shadow:0 5px 25px #0004;
+}
+#musicBar button{
+  border:0;background:transparent;color:white;font-size:17px;
+}
+#musicLabel{font-size:11px;color:#ffdfa0}
+@media(max-width:520px){
+  section{padding:28px 14px}
+  .grid{grid-template-columns:1fr}
+  .letter{font-size:19px}
+  .panel{padding:21px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto}
+}
 </style>
 </head>
-<body>
-<div id="stars"></div>
 
+<body>
+<div id="sky"></div>
+
+<!-- شاشة الدخول -->
 <div id="lock">
- <div class="card">
-  <div class="gift">🎁</div>
-  <p class="gold">A SPECIAL GIFT FOR YOU</p>
-  <h1 class="gold">فاطيما ❤️</h1>
-  <p class="muted">فيه مفاجأة صغيرة معمولة مخصوص عشانك من أخوكي زياد.<br>بس الأول، إيه تاريخ ميلادك؟ 🔐</p>
-  <input id="pass" type="password" inputmode="numeric"
-   maxlength="8" placeholder="تاريخ ميلادك">
-  <button class="btn" style="width:100%" onclick="unlock()">افتحي هديتك ✨</button>
-  <p id="err" style="color:#ffb7d4"></p>
- </div>
+  <div class="lock-card">
+    <div class="lock-icon">👑🎁</div>
+    <p class="eyebrow">A SECRET GIFT MADE WITH LOVE</p>
+    <h1 class="gold">أهلًا بصاحبة العيد… فاطيما 💜</h1>
+    <p class="muted">
+      الليلة دي معمولة مخصوص عشانك.<br>
+      فيه حكاية صغيرة مستنياكي، ومفتاحها تاريخ ميلادك.
+    </p>
+    <input id="password" type="password" inputmode="numeric"
+      maxlength="8" placeholder="تاريخ ميلادك">
+    <button class="btn full" onclick="unlock()">افتحي عالمك الخاص ✨</button>
+    <p id="err" aria-live="polite"></p>
+    <p class="small">هدية من أخوكي زياد، بكل الحب ❤️</p>
+  </div>
 </div>
 
-<!-- ارفعي ملف الأغنية على GitHub بالاسم kol-sana.mp3 -->
+<!-- اسم الملف لازم يكون kol-sana.mp3 -->
 <audio id="song" src="kol-sana.mp3" preload="auto" loop></audio>
 
-<main id="main">
- <section class="hero">
-  <div class="heart">💖</div>
-  <p class="gold">النهارده يوم مميز جدًا</p>
-  <h1>كل سنة وإنتِ قلبي يا فاطيما</h1>
-  <p class="muted">مش كل الهدايا بتتلف في ورق… فيه هدايا بتتعمل من القلب، ودي واحدة منهم ❤️</p>
-  <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">اقري رسالتي ليكي 💌</button>
-  <button class="btn" onclick="toggleSong()">🎵 تشغيل / إيقاف الأغنية</button>
-  <p id="songStatus" class="muted" style="font-size:13px">أغنيتك مستنياكي يا فاطيما 🎶</p>
- </section>
+<main id="app">
+  <section class="hero">
+    <div class="crown">✦ 👑 ✦</div>
+    <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+    <div class="heart">💖</div>
+    <h1>فاطيما…<br>إنتِ حكاية حلوة</h1>
+    <p class="muted">
+      مش كل يوم بنحتفل بحد وجوده لوحده بيضيف للبيت روح،
+      وضحكة بتغيّر شكل اليوم كله.
+      النهارده ليكي إنتِ، بكل تفاصيلك الحلوة.
+    </p>
+    <button class="btn" onclick="go('letterSection')">ابدئي المفاجأة 💌</button>
+    <button class="btn secondary" onclick="toggleMusic()">🎵 شغّلي أغنيتي</button>
+    <div class="scroll-hint">انزلي براحتك… لسه فيه حاجات حلوة ✨ ↓</div>
+  </section>
 
- <section id="letter">
-  <div class="panel">
-   <h2>💌 رسالة من زياد لفاطيما</h2>
-   <p class="gold">الجزء الأول — من قلبي ليكي</p>
-   <div class="letter">بصي يا فاطيما ❤️
+  <!-- رسالة جديدة: الجزء الأول -->
+  <section id="letterSection">
+    <p class="eyebrow" style="text-align:center">A LETTER FROM YOUR BROTHER</p>
+    <h2 class="section-title gold">كلام مش بيتقال كل يوم 💌</h2>
+    <div class="panel">
+      <p class="small">الرسالة الأولى · افتحي قلبك واقريها براحتك</p>
+      <div class="letter">يا فاطيما، تعالي أقولك حاجة…
 
-كل سنة وإنتِ طيبة يا أختي وحبيبتي، وكل سنة وإنتِ منوّرة حياتنا بضحكتك وروحك.
+عارفة إيه أكتر حاجة حلوة في إن الواحد يبقى عنده أخت؟ إنه مهما الأيام تتغيّر، ومهما الواحد يكبر ويبقى عنده مسؤوليات وحكايات كتير، يفضل فيه حد وجوده جزء من البيت ومن عمره ومن ذكرياته.
 
-أنا عارف إني ساعات بزعلِك، وممكن أكون عصبي معاكي أو مش بعرف أعبّر عن حبي ليكي بالطريقة اللي تستاهليها، بس الحقيقة إنك غالية عندي أكتر ما تتخيلي.
+إنتِ واحدة من الناس اللي مهما اتكلمت معاهم في اليوم العادي أو اتخانقت معاهم على حاجة ملهاش أي لازمة 😂، بيفضل ليهم مكان مختلف تمامًا.
 
-إنتِ مش مجرد أختي الصغيرة، إنتِ حتة من قلبي، وفرحتك بتفرق معايا، وزعلك بيوجعني حتى لو مبيّنتش ده.
+أنا مش بعمل المفاجأة دي عشان عيد ميلادك وبس؛ أنا بعملها عشان أحبّبك في ذكرى اليوم ده، وعشان يبقى عندك حاجة تفتكريها وتعرفي إن أخوكي فكّر فيكي وعمل حاجة مخصوص عشان يشوفك مبسوطة.
 
-يمكن نختلف ونتخانق على حاجات تافهة، وبعد شوية نرجع نتكلم كأن مفيش حاجة حصلت 😂❤️ بس ده اللي بحبه فينا… إن مهما حصل، تفضلي أختي اللي ليها مكان محدش يقدر ياخده.</div>
+ويمكن أنا مش دايمًا بعرف أعبّر بالطريقة الصح، ويمكن ساعات أتعامل معاكي بعفوية زيادة، بس إنتِ مش محتاجة مناسبة عشان تبقي غالية. إنتِ غالية في الأيام العادية كمان، حتى في الأيام اللي بنتخانق فيها على أتفه حاجة.
 
-   <div style="text-align:center;margin-top:18px">
-    <button class="btn" onclick="showPart2()">كمّلي رسالتي يا فاطيما 💗</button>
-   </div>
+أنا نفسي تفضلي دايمًا على طبيعتك، تضحكي من قلبك، وتتعلمي من كل تجربة، وتفرحي بالحاجات الصغيرة قبل الكبيرة.
 
-   <div id="part2">
-    <hr style="border-color:#ffffff20;margin:24px 0">
-    <p class="gold">الجزء التاني — وعد أخوكي ليكي</p>
-    <div class="letter">نفسي أشوفك دايمًا مبسوطة وواثقة في نفسك، وتحققي كل حاجة بتحلمي بيها، ومهما الدنيا صعبت عليكي تفضلي قوية وعارفة إنك تستاهلي كل خير.
+عيد ميلادك مش مجرد سنة جديدة في عمرك… دي فرصة أقولك فيها إن وجودك فارق، وإن ليكي أخ بيحب يشوفك بخير، وبيفرح لما يلاقيكي فرحانة من قلبك.</div>
 
-ومهما كبرنا وانشغلنا، هتفضلي أختي اللي بفرح لفرحتها، وبفتخر بيها، وبتمنى أشوفها أحسن وأسعد واحدة في الدنيا.
+      <div class="progress"><div id="progressBar"></div></div>
+      <div style="text-align:center">
+        <button class="btn" onclick="nextLetter()">لسه عندي كلام ليكي… كمّلي ❤️</button>
+      </div>
 
-مش هقولك إني أخ مثالي، بس هقولك إني بحبك بجد، وإنك هتفضلي غالية عندي في كل مراحل عمرك.
+      <!-- رسالة جديدة: الجزء الثاني -->
+      <div class="letter-part" id="letterPart2">
+        <p class="gold" style="text-align:center">الرسالة الثانية · من أخوكي ليكي</p>
+        <div class="letter">بصي يا فاطيما، أنا مش هقولك إن الدنيا هتبقى سهلة طول الوقت، ولا إن كل حاجة هتمشي زي ما إنتِ عايزة. بس هقولك حاجة أهم: متخليش يوم صعب يقنعك إن الأيام الحلوة مش جاية.
 
-ربنا يحفظك ليا، ويبعد عنك كل زعل، ويكتبلك أيام حلوة على قد قلبك، ويحققلك أمنياتك واحدة واحدة.
+اتعلمي، جرّبي، اغلطي واتعلمي من غلطك، وابدئي من جديد كل ما تحتاجي. متقارنيش نفسك بحد، لأن كل واحد ليه وقته وطريقه وحكايته.
 
-ويا ستي، كفاية عليكي الكلام الحلو ده… متطلبيش هدية تانية بقى 😂🎁
+ونفسي دايمًا لما تفرحي بحاجة حققتيها، تفتكري إنك تستاهلي تفرحي بنفسك، وإنك مش لازم تستني تصفيق من الدنيا عشان تعرفي إنك عملتي حاجة حلوة.
 
-كل سنة وإنتِ طيبة يا فاطيما، وكل سنة وإنتِ أختي وصاحبتي وحتة من روحي.
+وبالنسبة ليا أنا، فمفيش وعد مثالي هقولهولك، لكن فيه حاجة بسيطة: هتفضلي أختي، وهفضل أتمنى أشوفك أحسن وأسعد، وهفضل أفرح بنجاحك حتى لو نجاحك كان في حاجة صغيرة محدش خد باله منها.
 
-بحبك يا أختي ❤️
-أخوكي زياد.</div>
-    <div style="text-align:center;margin-top:18px">
-     <button class="btn" onclick="celebrate()">احتفال مخصوص ليكي 🎉</button>
+ولو اختلفنا، متفتكريش إن الخلاف معناه إن المحبة قلت. إحنا أهل، ومن حقنا نختلف ونزعل ونرجع نتصالح، والأهم إننا نفضل فاكرين قيمة بعض.
+
+وفي عيد ميلادك، بتمنالك راحة بال، وصحبة كويسة، وأيام تطبطب على قلبك، ونجاح يفرّحك، وضحكة متحتاجيش تخبي وراها أي زعل.
+
+كل سنة وإنتِ بتكبري في عمرك، وفي أحلامك، وفي ثقتك بنفسك. وكل سنة وإنتِ بتكتشفي إن جواكي حاجات حلوة أكتر مما كنتِ متخيلة.
+
+وبالمناسبة… بعد كل الكلام الجميل ده، لسه إنتِ أختي اللي ممكن أرخم عليها عادي جدًا 😂❤️
+
+كل سنة وإنتِ طيبة يا فاطيما.
+أخوكي زياد، اللي بيحبك وبيتمنالك الخير من قلبه.</div>
+        <div style="text-align:center;margin-top:18px">
+          <button class="btn" onclick="celebrate(35)">خلّينا نحتفل 🎉</button>
+        </div>
+      </div>
     </div>
-   </div>
-  </div>
- </section>
+  </section>
 
- <section>
-  <h2 class="gold">🎁 تلات هدايا صغيرة</h2>
-  <p class="muted">افتحي كل هدية وشوفي اللي جواها</p>
-  <div class="grid">
-   <div class="giftbox">
-    <div class="emoji">💗</div><h3>هدية الحب</h3>
-    <button class="btn" onclick="reveal('g1')">افتحي</button>
-    <p id="g1" class="hidden">إنتِ ليكي مكان في قلبي محدش ياخده ❤️</p>
-   </div>
-   <div class="giftbox">
-    <div class="emoji">🌟</div><h3>أمنية ليكي</h3>
-    <button class="btn" onclick="reveal('g2')">افتحي</button>
-    <p id="g2" class="hidden">ربنا يفرّح قلبك ويحققلك اللي بتتمنيه.</p>
-   </div>
-   <div class="giftbox">
-    <div class="emoji">🤗</div><h3>وعد أخوكي</h3>
-    <button class="btn" onclick="reveal('g3')">افتحي</button>
-    <p id="g3" class="hidden">هفضل أخوكي اللي بيحبك، حتى لو اتخانقنا على آخر قطعة شوكولاتة 😂</p>
-   </div>
-  </div>
- </section>
+  <!-- هدايا تفاعلية -->
+  <section>
+    <p class="eyebrow" style="text-align:center">THREE LITTLE TREASURES</p>
+    <h2 class="section-title gold">صندوق الحاجات اللي ليكي 🎁</h2>
+    <p class="section-sub">اختاري هدية واحدة ورا التانية… كل صندوق جواه معنى مختلف.</p>
+    <div class="grid">
+      <div class="tile">
+        <div class="emoji">💎</div>
+        <h3>حاجة عايزك تفتكريها</h3>
+        <p>افتحي الصندوق الأول</p>
+        <button class="btn" onclick="reveal('box1')">افتحي الهدية</button>
+        <div class="hidden-message" id="box1">
+          قيمتك مش مرتبطة برأي أي حد فيكي. خدي بالك من قلبك، وآمني بنفسك، ومتقلليش من نفسك أبدًا.
+        </div>
+      </div>
+      <div class="tile">
+        <div class="emoji">🌷</div>
+        <h3>دعوة من قلبي</h3>
+        <p>افتحي الصندوق التاني</p>
+        <button class="btn" onclick="reveal('box2')">افتحي الهدية</button>
+        <div class="hidden-message" id="box2">
+          يا رب يرزقك أيام فيها طمأنينة وفرحة، ويفتحلك أبواب الخير، ويبعد عنك كل حاجة توجع قلبك.
+        </div>
+      </div>
+      <div class="tile">
+        <div class="emoji">🗝️</div>
+        <h3>سر صغير بينا</h3>
+        <p>افتحي الصندوق التالت</p>
+        <button class="btn" onclick="reveal('box3')">افتحي الهدية</button>
+        <div class="hidden-message" id="box3">
+          حتى لو مش بقولك كل يوم، أنا بفرح لما أشوفك مبسوطة. ومهما كبرتِ، هتفضلي أختي اللي ليها مكانها الخاص عندي.
+        </div>
+      </div>
+      <div class="tile">
+        <div class="emoji">🎀</div>
+        <h3>هدية من غير ورق</h3>
+        <p>افتحي الصندوق الرابع</p>
+        <button class="btn" onclick="reveal('box4')">افتحي الهدية</button>
+        <div class="hidden-message" id="box4">
+          هديتي ليكي إني أتمنى لك سنة جديدة فيها فرص حلوة، وناس صادقة، وذكريات تفضلي تبتسمي كل ما تفتكريها.
+        </div>
+      </div>
+    </div>
+  </section>
 
- <section>
-  <div class="panel" style="text-align:center">
-   <div style="font-size:55px">🎂✨🎈</div>
-   <h2>تمنّي أمنية يا فاطيما</h2>
-   <p class="muted">غمّضي عينك وتمنّي حاجة حلوة من قلبك.</p>
-   <button class="btn" onclick="wish()">تمنّيت أمنيتي 💫</button>
-   <p id="wishText" class="hidden gold">يا رب أشوف أمنيتك حقيقة، وأشوف الفرحة في عينيكي دايمًا ❤️</p>
-  </div>
- </section>
+  <!-- كبسولة أمنية -->
+  <section>
+    <div class="panel">
+      <p class="eyebrow" style="text-align:center">A WISH JUST FOR YOU</p>
+      <h2>كبسولة أمنيتك السرية 🌠</h2>
+      <p class="section-sub">اختاري أمنية في قلبك، مش لازم تكتبيها أو تقوليها لحد. لما تبقي جاهزة، افتحي الرسالة.</p>
+      <div style="text-align:center;font-size:48px">🌙✨</div>
+      <div style="text-align:center">
+        <button class="btn" onclick="openWish()">أنا تمنّيت… افتحي الرسالة</button>
+      </div>
+      <div class="hidden-message" id="wishMessage" style="text-align:center">
+        يا رب الأمنية اللي في قلبك تقرّب منك يوم ورا يوم، ويا رب تفرحي بحاجة كنتِ فاكرة إنها بعيدة، ويكون اللي جاي أحنّ وأجمل مما تتخيلي. ❤️
+      </div>
+    </div>
+  </section>
 
- <section>
-  <div class="panel" style="text-align:center">
-   <div style="font-size:50px">👑💖</div>
-   <h2>رسالة أخيرة</h2>
-   <p class="letter" style="text-align:center">يا فاطيما، مش لازم يكون عندي كلام كتير عشان أقولك إنك غالية… كفاية إنك أختي، ودي لوحدها نعمة كبيرة بحمد ربنا عليها.
+  <!-- رسالة تكتبها لنفسها -->
+  <section>
+    <div class="panel">
+      <p class="eyebrow" style="text-align:center">A NOTE TO YOUR FUTURE SELF</p>
+      <h2>رسالة من فاطيما لفاطيما 💌</h2>
+      <p class="section-sub">لو حابة، اكتبي أمنية أو كلمة لنفسك في السنة الجديدة. الكلام ده مش بيتبعت لأي حد.</p>
+      <textarea id="futureNote" placeholder="السنة دي نفسي أكون..."></textarea>
+      <button class="btn full" onclick="showNote()">ورّيني رسالتي ✨</button>
+      <div class="hidden-message" id="noteResult"></div>
+      <p class="small">ملاحظة: الرسالة بتظهر هنا في الصفحة فقط، ومش بتتحفظ على الإنترنت.</p>
+    </div>
+  </section>
 
-كل سنة وإنتِ طيبة يا روح أخوكي ❤️</p>
-   <button class="btn" onclick="celebrate()">يلا نحتفل تاني 🎉</button>
-  </div>
- </section>
- <footer>اتعملت بحب من زياد لفاطيما ❤️<br>كل سنة وإنتِ أحلى أخت في الدنيا.</footer>
+  <!-- النهاية -->
+  <section>
+    <div class="panel" style="text-align:center">
+      <div style="font-size:55px">👑💖🎂</div>
+      <h2>وصلنا لآخر المفاجأة…</h2>
+      <p class="muted">
+        بس مش آخر الكلام الحلو، ولا آخر الأيام اللي نضحك فيها مع بعض.
+        اضغطي على الزر ده عشان نشوف آخر هدية.
+      </p>
+      <button class="btn" onclick="openFinale()">افتحي آخر هدية يا فاطيما 💝</button>
+    </div>
+  </section>
+
+  <footer>
+    اتعملت مخصوص لفاطيما، من زياد ❤️<br>
+    مش لازم الهدية تكون كبيرة في حجمها… المهم تكون طالعة من القلب.
+  </footer>
 </main>
 
+<div id="musicBar">
+  <button onclick="toggleMusic()" id="musicButton" aria-label="تشغيل أو إيقاف الأغنية">▶</button>
+  <span id="musicLabel">أغنيتك يا فاطيما 🎵</span>
+</div>
+
+<div id="finale">
+  <div class="final-card">
+    <div style="font-size:65px">💖✨👑✨💖</div>
+    <p class="eyebrow">MADE WITH LOVE</p>
+    <h1>كل سنة وإنتِ حكاية حلوة يا فاطيما</h1>
+    <p class="muted">
+      أتمنى لما تقفلي الصفحة دي، تفضلي فاكرة إن فيه حد عملها مخصوص عشانك،
+      وإنك تستاهلي الفرح والحب والأيام الحلوة.
+      <br><br>
+      مش لازم نكون متفقين في كل حاجة، ولا لازم أقول كلام كبير كل يوم…
+      المهم إنك أختي، وإن ليكي مكانك اللي يخصك في حياتي.
+      <br><br>
+      ربنا يسعد قلبك، ويكتبلك الخير في كل خطوة،
+      ويجعل السنة الجديدة بداية لحاجات تفرّحك بجد.
+      <br><br>
+      <strong class="gold">كل سنة وإنتِ طيبة يا فاطيما ❤️</strong>
+      <br>من أخوكي زياد.
+    </p>
+    <button class="btn" onclick="celebrate(65)">احتفال أخير 🎉</button>
+    <button class="btn secondary" onclick="closeFinale()">ارجعي للمفاجأة 💜</button>
+  </div>
+</div>
+
 <script>
-const stars=document.getElementById('stars');
-for(let i=0;i<65;i++){
- const s=document.createElement('span');
- s.className='star';s.textContent=Math.random()>.5?'✦':'·';
- s.style.left=Math.random()*100+'%';
- s.style.top=Math.random()*100+'%';
- s.style.fontSize=(8+Math.random()*13)+'px';
- s.style.animationDelay=Math.random()*3+'s';
- stars.appendChild(s);
+/* نجوم الخلفية */
+const sky=document.getElementById('sky');
+for(let i=0;i<85;i++){
+  const s=document.createElement('span');
+  s.className='star';
+  s.textContent=Math.random()>.65?'✦':'·';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.fontSize=(8+Math.random()*14)+'px';
+  s.style.animationDelay=Math.random()*3+'s';
+  sky.appendChild(s);
 }
 
 const song=document.getElementById('song');
-const statusText=document.getElementById('songStatus');
+const musicButton=document.getElementById('musicButton');
+const musicLabel=document.getElementById('musicLabel');
 
 function unlock(){
- if(document.getElementById('pass').value!=='20102011'){
-  document.getElementById('err').textContent='جرّبي تاريخ ميلادك تاني يا فاطيما ❤️';
-  return;
- }
- document.getElementById('lock').style.display='none';
- document.getElementById('main').style.display='block';
- celebrate();
- song.play().then(()=>{
-  statusText.textContent='الأغنية شغالة مخصوص عشانك 🎵❤️';
- }).catch(()=>{
-  statusText.textContent='اضغطي زر تشغيل الأغنية لو مبدأتش.';
- });
+  const p=document.getElementById('password').value;
+  if(p!=='20102011'){
+    document.getElementById('err').textContent='مش دي كلمة السر يا فاطيما، جرّبي تاني ❤️';
+    document.getElementById('password').value='';
+    return;
+  }
+  document.getElementById('lock').style.display='none';
+  document.getElementById('app').style.display='block';
+  document.getElementById('musicBar').style.display='flex';
+  window.scrollTo(0,0);
+  celebrate(35);
+  song.play().then(()=>{
+    musicButton.textContent='Ⅱ';
+    musicLabel.textContent='الأغنية شغالة 🎵';
+  }).catch(()=>{
+    musicLabel.textContent='اضغطي ▶ لتشغيل الأغنية';
+  });
 }
-document.getElementById('pass').addEventListener('keydown',e=>{
- if(e.key==='Enter')unlock();
+document.getElementById('password').addEventListener('keydown',e=>{
+  if(e.key==='Enter')unlock();
 });
 
-function toggleSong(){
- if(song.paused){
-  song.play().then(()=>statusText.textContent='الأغنية شغالة 🎵❤️')
-  .catch(()=>statusText.textContent='تأكدي إن ملف kol-sana.mp3 مرفوع مع الموقع.');
- }else{
-  song.pause();statusText.textContent='الأغنية متوقفة مؤقتًا 🎵';
- }
+function toggleMusic(){
+  if(song.paused){
+    song.play().then(()=>{
+      musicButton.textContent='Ⅱ';
+      musicLabel.textContent='الأغنية شغالة 🎵';
+    }).catch(()=>{
+      musicLabel.textContent='ملف الأغنية غير موجود أو تعذّر تشغيله';
+    });
+  }else{
+    song.pause();
+    musicButton.textContent='▶';
+    musicLabel.textContent='الأغنية متوقفة مؤقتًا';
+  }
 }
 song.addEventListener('error',()=>{
- statusText.textContent='ملف الأغنية مش موجود. ارفعيه باسم kol-sana.mp3 في نفس المستودع.';
+  musicLabel.textContent='ارفعي kol-sana.mp3 بجوار index.html';
+  musicButton.textContent='▶';
 });
 
-function showPart2(){
- document.getElementById('part2').style.display='block';
- document.querySelector('#part2').scrollIntoView({behavior:'smooth',block:'start'});
- celebrate();
+function go(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+function nextLetter(){
+  const p=document.getElementById('letterPart2');
+  p.style.display='block';
+  document.getElementById('progressBar').style.width='100%';
+  p.scrollIntoView({behavior:'smooth',block:'start'});
+  celebrate(12);
 }
 function reveal(id){
- const el=document.getElementById(id);
- el.style.display=el.style.display==='block'?'none':'block';
- if(el.style.display==='block')celebrate(8);
+  const el=document.getElementById(id);
+  const opening=el.style.display!=='block';
+  el.style.display=opening?'block':'none';
+  if(opening)celebrate(8);
 }
-function wish(){
- document.getElementById('wishText').style.display='block';
- celebrate(25);
+function openWish(){
+  document.getElementById('wishMessage').style.display='block';
+  celebrate(22);
 }
-function celebrate(n=24){
- const emojis=['💖','💕','✨','🌟','🎉','💗'];
- for(let i=0;i<n;i++){
-  setTimeout(()=>{
-   const el=document.createElement('span');
-   el.className='floaty';
-   el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
-   el.style.left=Math.random()*95+'%';
-   el.style.fontSize=(18+Math.random()*22)+'px';
-   document.body.appendChild(el);
-   setTimeout(()=>el.remove(),3100);
-  },i*60);
- }
+function showNote(){
+  const note=document.getElementById('futureNote').value.trim();
+  const result=document.getElementById('noteResult');
+  result.textContent=note
+    ? 'يا فاطيما، خلي الرسالة دي تفتكرك بأمنيتك، وارجعي اقريها بعد فترة وشوفي قد إيه اتغيرتي وكبرتي. ❤️\\n\\nرسالتك: '+note
+    : 'حتى لو لسه مش عارفة تكتبي إيه، خدي وقتك. مش لازم يكون عندك كل الإجابات النهارده. ❤️';
+  result.style.display='block';
+}
+function openFinale(){
+  document.getElementById('finale').style.display='flex';
+  celebrate(40);
+}
+function closeFinale(){
+  document.getElementById('finale').style.display='none';
+}
+function celebrate(n=25){
+  const emojis=['💖','💕','✨','🌟','🎉','💗','🎀'];
+  for(let i=0;i<n;i++){
+    setTimeout(()=>{
+      const el=document.createElement('span');
+      el.className='floaty';
+      el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+      el.style.left=Math.random()*95+'%';
+      el.style.fontSize=(18+Math.random()*25)+'px';
+      document.body.appendChild(el);
+      setTimeout(()=>el.remove(),3600);
+    },i*45);
+  }
 }
 </script>
 </body>
