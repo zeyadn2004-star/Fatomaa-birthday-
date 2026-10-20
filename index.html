@@ -3,627 +3,267 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#160b29">
-<title>هدية فاطيما السرية ❤️</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#170c27">
+<title>لفاطيما، من زياد بكل الحب ❤️</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Amiri:wght@400;700&display=swap');
-
-:root {
-  --gold: #ffda91;
-  --pink: #ff9fc9;
-  --purple: #a879ff;
-  --bg: #10091d;
+*{box-sizing:border-box}
+body{
+ margin:0;color:#fff7ff;font-family:Arial,sans-serif;
+ background:radial-gradient(circle at top,#51275f,#170c27 65%,#0d0717);
+ min-height:100vh;overflow-x:hidden
 }
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: #fff7ff;
-  font-family: 'Cairo', Arial, sans-serif;
-  background:
-    radial-gradient(ellipse at 50% 0%, #422052 0%, transparent 55%),
-    linear-gradient(160deg, #10091d, #21102f 55%, #10091d);
-  overflow-x: hidden;
+button,input{font:inherit}
+button{cursor:pointer}
+.gold{color:#ffdfa0}
+.muted{color:#e3d4ee;line-height:2}
+#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;color:#fff;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:.2;transform:scale(.6)}}
+#lock{
+ position:fixed;inset:0;z-index:10;display:flex;
+ align-items:center;justify-content:center;text-align:center;padding:22px;
+ background:radial-gradient(circle at top,#60336e,#11091d 75%)
 }
-
-button, input { font: inherit; }
-
-button { cursor: pointer; }
-
-#stars {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
+.card{
+ width:100%;max-width:440px;padding:28px 22px;
+ border:1px solid #ffdfa05c;border-radius:26px;
+ background:#ffffff09;box-shadow:0 0 45px #d68bff16
 }
-
-.star {
-  position: absolute;
-  color: white;
-  opacity: .65;
-  animation: twinkle 2.5s infinite alternate;
+.gift{font-size:65px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-9px)}}
+h1,h2{line-height:1.6}
+input{
+ width:100%;padding:15px;border-radius:14px;
+ border:1px solid #ffdfa0;background:#170d25;
+ color:white;text-align:center;letter-spacing:5px;margin:12px 0
 }
-
-@keyframes twinkle {
-  from { opacity: .15; transform: scale(.7); }
-  to { opacity: .95; transform: scale(1.2); }
+.btn{
+ border:0;border-radius:30px;padding:13px 21px;
+ background:linear-gradient(110deg,#ffe5a4,#f5a9d0);
+ color:#301432;font-weight:bold;margin:5px;
+ box-shadow:0 5px 22px #f5a9d02a
 }
-
-#lockScreen {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 22px;
-  text-align: center;
-  background:
-    radial-gradient(ellipse at 50% 20%, #60336f, transparent 65%),
-    #10091d;
-  transition: opacity .8s;
+.btn:active{transform:scale(.97)}
+#main{display:none;position:relative}
+section{max-width:760px;margin:auto;padding:35px 18px;text-align:center}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero h1{
+ font-size:clamp(34px,9vw,60px);
+ background:linear-gradient(100deg,#ffe9ac,#ffacd5,#d4b4ff);
+ -webkit-background-clip:text;background-clip:text;color:transparent
 }
-
-.lock-card {
-  width: 100%;
-  max-width: 390px;
-  padding: 30px 22px;
-  border: 1px solid #ffda9170;
-  border-radius: 28px;
-  background: #ffffff0b;
-  box-shadow: 0 0 60px #b46aff18;
-  backdrop-filter: blur(12px);
+.heart{font-size:68px;animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.12)}}
+.panel{
+ text-align:right;padding:24px 19px;margin:15px auto;
+ border:1px solid #ffffff20;border-radius:23px;
+ background:#ffffff09;line-height:2
 }
-
-.lock-icon {
-  font-size: 75px;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  50% { transform: translateY(-12px) rotate(4deg); }
-}
-
-.gold {
-  color: var(--gold);
-  text-shadow: 0 0 20px #ffc95d40;
-}
-
-.subtitle {
-  color: #e8d5ef;
-  line-height: 2;
-  font-size: 15px;
-}
-
-#password {
-  width: 100%;
-  padding: 15px;
-  margin: 14px 0 10px;
-  border-radius: 15px;
-  border: 1px solid #ffda91a0;
-  outline: none;
-  background: #160d24;
-  color: white;
-  text-align: center;
-  letter-spacing: 5px;
-  font-size: 22px;
-}
-
-.btn {
-  display: inline-block;
-  border: 0;
-  padding: 13px 23px;
-  border-radius: 30px;
-  background: linear-gradient(100deg, #ffe6a8, #f2a9d3);
-  color: #301533;
-  font-weight: 900;
-  box-shadow: 0 6px 24px #f6b5d52b;
-  transition: transform .2s, filter .2s;
-}
-
-.btn:active { transform: scale(.96); }
-
-.btn:hover { filter: brightness(1.08); }
-
-#unlockBtn { width: 100%; }
-
-#error {
-  min-height: 25px;
-  color: #ffb8d1;
-  font-size: 13px;
-}
-
-#mainContent {
-  position: relative;
-  z-index: 1;
-  display: none;
-  padding-bottom: 55px;
-}
-
-section {
-  width: min(900px, 100%);
-  margin: auto;
-  padding: 45px 20px;
-  text-align: center;
-}
-
-.hero {
-  min-height: 94vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.crown { font-size: 40px; }
-
-.hero h1 {
-  font-size: clamp(36px, 9vw, 66px);
-  line-height: 1.5;
-  margin: 10px 0;
-  background: linear-gradient(100deg, #fff0bd, #ffacd5, #d8b8ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  max-width: 560px;
-  line-height: 2.1;
-  color: #e9d7f0;
-}
-
-.big-heart {
-  font-size: 76px;
-  filter: drop-shadow(0 0 25px #ff7eb4);
-  animation: heartbeat 1.4s infinite;
-}
-
-@keyframes heartbeat {
-  0%,100% { transform: scale(1); }
-  15% { transform: scale(1.13); }
-  30% { transform: scale(1); }
-  45% { transform: scale(1.09); }
-}
-
-.panel {
-  padding: 26px 20px;
-  margin: 18px auto;
-  border: 1px solid #f7d4ff24;
-  border-radius: 25px;
-  background: linear-gradient(145deg, #ffffff0c, #ffffff04);
-  box-shadow: 0 12px 40px #00000016;
-  text-align: right;
-}
-
-.panel h2 {
-  text-align: center;
-  color: var(--gold);
-  margin-top: 0;
-}
-
-.letter {
-  font-family: 'Amiri', Georgia, serif;
-  font-size: 21px;
-  line-height: 2.15;
-  white-space: pre-line;
-  color: #fff0fb;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 13px;
-  margin-top: 22px;
-}
-
-.gift-card {
-  min-height: 170px;
-  padding: 20px 10px;
-  border-radius: 20px;
-  border: 1px solid #ffffff20;
-  background: #ffffff08;
-}
-
-.gift-card .emoji { font-size: 38px; }
-
-.gift-card h3 {
-  color: var(--pink);
-  font-size: 16px;
-}
-
-.gift-card p {
-  color: #e7d8ed;
-  font-size: 13px;
-  line-height: 1.9;
-}
-
-.reveal {
-  display: none;
-  margin-top: 18px;
-  padding: 20px;
-  border-radius: 18px;
-  background: #ffda9110;
-  border: 1px solid #ffda9140;
-  line-height: 2;
-}
-
-#songStatus {
-  font-size: 13px;
-  color: #e6d3ed;
-  line-height: 2;
-}
-
-footer {
-  text-align: center;
-  color: #c9b5d5;
-  font-size: 13px;
-  padding: 20px;
-}
-
-.floating {
-  position: fixed;
-  bottom: -30px;
-  z-index: 50;
-  pointer-events: none;
-  animation: rise 3.5s linear forwards;
-}
-
-@keyframes rise {
-  0% { transform: translateY(0) rotate(0); opacity: 1; }
-  100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
-}
-
-#surpriseFinal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  padding: 25px;
-  background: #10091df5;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow-y: auto;
-}
-
-.final-card { max-width: 500px; }
-
-.final-card h1 {
-  color: var(--gold);
-  font-size: clamp(32px, 8vw, 54px);
-}
-
-.final-card p {
-  line-height: 2.2;
-  color: #f8e8f8;
-}
-
-@media(max-width: 560px) {
-  section { padding: 32px 16px; }
-  .cards { grid-template-columns: 1fr; }
-  .gift-card { min-height: auto; }
-  .letter { font-size: 19px; }
-}
-
-@media(prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+.panel h2{text-align:center;color:#ffdfa0}
+.letter{font-size:18px;line-height:2.1;white-space:pre-line}
+#part2{display:none}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.giftbox{padding:18px 9px;border:1px solid #ffffff20;border-radius:19px;background:#ffffff08}
+.giftbox .emoji{font-size:35px}
+.giftbox p{font-size:14px;line-height:1.9}
+.hidden{display:none}
+footer{text-align:center;padding:30px 15px;color:#cbb8d7}
+.floaty{position:fixed;bottom:-30px;pointer-events:none;z-index:20;animation:rise 3s linear forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.letter{font-size:17px}section{padding:28px 14px}}
 </style>
 </head>
-
 <body>
 <div id="stars"></div>
 
-<!-- شاشة كلمة السر -->
-<div id="lockScreen">
-  <div class="lock-card">
-    <div class="lock-icon">🎁</div>
-    <div class="gold" style="font-size:13px;letter-spacing:3px">
-      A LITTLE SURPRISE FOR YOU
-    </div>
-    <h1 class="gold">فاطيما ❤️</h1>
-    <p class="subtitle">
-      فيه حاجة معمولة مخصوص عشانك يا أختي الحبيبة…
-      <br>بس الهدية دي ليها مفتاح سري 🔐
-    </p>
-
-    <input id="password" type="password"
-      inputmode="numeric" maxlength="8"
-      placeholder="تاريخ ميلادك"
-      autocomplete="off">
-
-    <button class="btn" id="unlockBtn">
-      افتحي هديتك يا فاطيما ✨
-    </button>
-
-    <p id="error" aria-live="polite"></p>
-    <p style="font-size:12px;color:#c8b1d4">
-      معمولة بكل الحب من أخوكي ❤️
-    </p>
-  </div>
+<div id="lock">
+ <div class="card">
+  <div class="gift">🎁</div>
+  <p class="gold">A SPECIAL GIFT FOR YOU</p>
+  <h1 class="gold">فاطيما ❤️</h1>
+  <p class="muted">فيه مفاجأة صغيرة معمولة مخصوص عشانك من أخوكي زياد.<br>بس الأول، إيه تاريخ ميلادك؟ 🔐</p>
+  <input id="pass" type="password" inputmode="numeric"
+   maxlength="8" placeholder="تاريخ ميلادك">
+  <button class="btn" style="width:100%" onclick="unlock()">افتحي هديتك ✨</button>
+  <p id="err" style="color:#ffb7d4"></p>
+ </div>
 </div>
 
-<!-- حطي ملف الأغنية في نفس مجلد الموقع -->
-<audio id="birthdaySong" src="kol-sana.mp3" preload="auto"
-  loop></audio>
+<!-- ارفعي ملف الأغنية على GitHub بالاسم kol-sana.mp3 -->
+<audio id="song" src="kol-sana.mp3" preload="auto" loop></audio>
 
-<main id="mainContent">
+<main id="main">
+ <section class="hero">
+  <div class="heart">💖</div>
+  <p class="gold">النهارده يوم مميز جدًا</p>
+  <h1>كل سنة وإنتِ قلبي يا فاطيما</h1>
+  <p class="muted">مش كل الهدايا بتتلف في ورق… فيه هدايا بتتعمل من القلب، ودي واحدة منهم ❤️</p>
+  <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">اقري رسالتي ليكي 💌</button>
+  <button class="btn" onclick="toggleSong()">🎵 تشغيل / إيقاف الأغنية</button>
+  <p id="songStatus" class="muted" style="font-size:13px">أغنيتك مستنياكي يا فاطيما 🎶</p>
+ </section>
 
-  <section class="hero">
-    <div class="crown">👑✨</div>
-    <div class="big-heart">💖</div>
-    <p class="gold">النهارده مش يوم عادي أبدًا</p>
-    <h1>كل سنة وإنتِ قلبي يا فاطيما</h1>
-    <p>
-      النهارده يوم ميلاد أختي وحبيبتي وقطعة من قلبي…
-      اليوم اللي الدنيا فيه بقت أحلى بوجودك.
-    </p>
+ <section id="letter">
+  <div class="panel">
+   <h2>💌 رسالة من زياد لفاطيما</h2>
+   <p class="gold">الجزء الأول — من قلبي ليكي</p>
+   <div class="letter">بصي يا فاطيما ❤️
 
-    <button class="btn" onclick="goToLetter()">
-      عندي كلام ليكي من قلبي 💌
-    </button>
+كل سنة وإنتِ طيبة يا أختي وحبيبتي، وكل سنة وإنتِ منوّرة حياتنا بضحكتك وروحك.
 
-    <p id="songStatus">
-      🎵 لو الأغنية مشتغلتش، اضغطي زر تشغيل الأغنية
-    </p>
-    <button class="btn" onclick="toggleSong()">
-      🎵 تشغيل / إيقاف الأغنية
-    </button>
-  </section>
+أنا عارف إني ساعات بزعلِك، وممكن أكون عصبي معاكي أو مش بعرف أعبّر عن حبي ليكي بالطريقة اللي تستاهليها، بس الحقيقة إنك غالية عندي أكتر ما تتخيلي.
 
-  <section id="letterSection">
-    <div class="panel">
-      <h2>💌 رسالة من زياد لفاطيما</h2>
-      <div class="letter">بصي يا فاطيما…
+إنتِ مش مجرد أختي الصغيرة، إنتِ حتة من قلبي، وفرحتك بتفرق معايا، وزعلك بيوجعني حتى لو مبيّنتش ده.
 
-أنا عارف إني مش دايمًا بعرف أقولك كل اللي جوايا، وممكن أزعلك مني ساعات، وممكن أكون عصبي معاكي أو أتكلم بطريقة تضايقك، بس عايزك تعرفي إن مهما حصل بينا، إنتِ غالية عندي بطريقة الكلام لوحده مش هيعرف يوصفها.
+يمكن نختلف ونتخانق على حاجات تافهة، وبعد شوية نرجع نتكلم كأن مفيش حاجة حصلت 😂❤️ بس ده اللي بحبه فينا… إن مهما حصل، تفضلي أختي اللي ليها مكان محدش يقدر ياخده.</div>
 
-إنتِ مش مجرد أختي الصغيرة، إنتِ حتة مني، وإنتِ من الناس اللي مهما الدنيا أخدتني ومهما كبرت وانشغلت، هيفضل ليهم مكان جوايا محدش يقدر ياخده.
+   <div style="text-align:center;margin-top:18px">
+    <button class="btn" onclick="showPart2()">كمّلي رسالتي يا فاطيما 💗</button>
+   </div>
 
-أنا يمكن أزعلك، ويمكن أختلف معاكي، ويمكن أقولك لأ على حاجات كتير، بس عمري ما هبقى عايز أشوفك مكسورة أو زعلانة. ولو في يوم حسّيتي إني قاسي عليكي، افتكري إنك أختي اللي بحبها، وإن خوفي عليكي ساعات بيخليني أتصرف بطريقة مش أحسن حاجة.
+   <div id="part2">
+    <hr style="border-color:#ffffff20;margin:24px 0">
+    <p class="gold">الجزء التاني — وعد أخوكي ليكي</p>
+    <div class="letter">نفسي أشوفك دايمًا مبسوطة وواثقة في نفسك، وتحققي كل حاجة بتحلمي بيها، ومهما الدنيا صعبت عليكي تفضلي قوية وعارفة إنك تستاهلي كل خير.
 
-أنا مش عايزك تكبري وبس، أنا عايزك تكبري وإنتِ واثقة في نفسك، عارفة قيمتك، ومش مستنية من حد يقولك إنك تستاهلي الحب والفرحة. إنتِ تستاهلي كل حاجة حلوة، وتستاهلي ناس تحافظ على قلبك وتفرح لفرحتك وتكون جنبك وقت تعبك.
+ومهما كبرنا وانشغلنا، هتفضلي أختي اللي بفرح لفرحتها، وبفتخر بيها، وبتمنى أشوفها أحسن وأسعد واحدة في الدنيا.
 
-ونفسي لما الأيام تكبرنا، وتبقى ليكي حياتك وأحلامك وحكاياتك، تفضلي عارفة إن ليكي أخ مهما اتشغل أو اتعب، هيفضل يفرح بنجاحك، ويخاف عليكي، ويفتخر بيكي، ويتمنى يشوفك أحسن من أي حد.
+مش هقولك إني أخ مثالي، بس هقولك إني بحبك بجد، وإنك هتفضلي غالية عندي في كل مراحل عمرك.
 
-يمكن أنا مش دايمًا الأخ المثالي، ومش كل مرة بعرف أختار الكلام الصح، بس صدقيني أنا بحبك بجد، وبفرح لما أشوفك مبسوطة، وحتى لما أزعلك، عمري ما بتمنى ليكي غير الخير.
+ربنا يحفظك ليا، ويبعد عنك كل زعل، ويكتبلك أيام حلوة على قد قلبك، ويحققلك أمنياتك واحدة واحدة.
 
-في عيد ميلادك، مش هتمنالك بس سنة حلوة… أنا بتمنالك عمر كامل مليان راحة بال، وضحكة طالعة من قلبك، ونجاح يخليكي فخورة بنفسك، وأيام تعوضك عن أي يوم زعلتي فيه.
+ويا ستي، كفاية عليكي الكلام الحلو ده… متطلبيش هدية تانية بقى 😂🎁
 
-ربنا يحفظك ليا، ويبعد عنك كل شر، وما يورينيش فيكي حاجة توجع قلبي، ويخليني دايمًا سبب في فرحتك مش في زعلك.
+كل سنة وإنتِ طيبة يا فاطيما، وكل سنة وإنتِ أختي وصاحبتي وحتة من روحي.
 
-وآخر حاجة عايزك تحفظيها كويس…
-
-مهما كبرتي، ومهما بقيتي قوية ومستقلة، ومهما الدنيا خدت كل واحد في طريق، هتفضلي أختي الصغيرة اللي ليها مكان مخصوص في قلبي.
-
-كل سنة وإنتِ طيبة يا فاطيما، وكل سنة وإنتِ منوّرة حياتنا، وكل سنة وأنا أخوكي اللي بيحبك حتى في الأيام اللي بتتخانقوا فيها على أتفه حاجة 😂❤️
-
-بحبك يا أختي، وربنا يديمك نعمة في حياتي.
-
-أخوكي،
-زياد ❤️</div>
+بحبك يا أختي ❤️
+أخوكي زياد.</div>
+    <div style="text-align:center;margin-top:18px">
+     <button class="btn" onclick="celebrate()">احتفال مخصوص ليكي 🎉</button>
     </div>
-  </section>
+   </div>
+  </div>
+ </section>
 
-  <section>
-    <h2 class="gold">🎁 عندي ليكي 3 هدايا صغيرة</h2>
-    <p class="subtitle">اختاري كل هدية وافتحيها واحدة واحدة</p>
+ <section>
+  <h2 class="gold">🎁 تلات هدايا صغيرة</h2>
+  <p class="muted">افتحي كل هدية وشوفي اللي جواها</p>
+  <div class="grid">
+   <div class="giftbox">
+    <div class="emoji">💗</div><h3>هدية الحب</h3>
+    <button class="btn" onclick="reveal('g1')">افتحي</button>
+    <p id="g1" class="hidden">إنتِ ليكي مكان في قلبي محدش ياخده ❤️</p>
+   </div>
+   <div class="giftbox">
+    <div class="emoji">🌟</div><h3>أمنية ليكي</h3>
+    <button class="btn" onclick="reveal('g2')">افتحي</button>
+    <p id="g2" class="hidden">ربنا يفرّح قلبك ويحققلك اللي بتتمنيه.</p>
+   </div>
+   <div class="giftbox">
+    <div class="emoji">🤗</div><h3>وعد أخوكي</h3>
+    <button class="btn" onclick="reveal('g3')">افتحي</button>
+    <p id="g3" class="hidden">هفضل أخوكي اللي بيحبك، حتى لو اتخانقنا على آخر قطعة شوكولاتة 😂</p>
+   </div>
+  </div>
+ </section>
 
-    <div class="cards">
-      <div class="gift-card">
-        <div class="emoji">💗</div>
-        <h3>هدية الحب</h3>
-        <button class="btn" onclick="reveal('gift1')">افتحيها</button>
-        <div class="reveal" id="gift1">
-          إنتِ أختي، ودي لوحدها مكانة محدش في الدنيا يقدر ينافسك عليها ❤️
-        </div>
-      </div>
+ <section>
+  <div class="panel" style="text-align:center">
+   <div style="font-size:55px">🎂✨🎈</div>
+   <h2>تمنّي أمنية يا فاطيما</h2>
+   <p class="muted">غمّضي عينك وتمنّي حاجة حلوة من قلبك.</p>
+   <button class="btn" onclick="wish()">تمنّيت أمنيتي 💫</button>
+   <p id="wishText" class="hidden gold">يا رب أشوف أمنيتك حقيقة، وأشوف الفرحة في عينيكي دايمًا ❤️</p>
+  </div>
+ </section>
 
-      <div class="gift-card">
-        <div class="emoji">🌟</div>
-        <h3>هدية أمنية</h3>
-        <button class="btn" onclick="reveal('gift2')">افتحيها</button>
-        <div class="reveal" id="gift2">
-          أتمنى أشوفك ناجحة ومبسوطة، وتحققي كل حاجة قلبك بيحلم بيها.
-        </div>
-      </div>
+ <section>
+  <div class="panel" style="text-align:center">
+   <div style="font-size:50px">👑💖</div>
+   <h2>رسالة أخيرة</h2>
+   <p class="letter" style="text-align:center">يا فاطيما، مش لازم يكون عندي كلام كتير عشان أقولك إنك غالية… كفاية إنك أختي، ودي لوحدها نعمة كبيرة بحمد ربنا عليها.
 
-      <div class="gift-card">
-        <div class="emoji">🤗</div>
-        <h3>هدية وعد</h3>
-        <button class="btn" onclick="reveal('gift3')">افتحيها</button>
-        <div class="reveal" id="gift3">
-          أوعدك إني هفضل أخوكي، حتى لو اتخانقنا على آخر قطعة شوكولاتة 😂🍫
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="panel" style="text-align:center">
-      <div style="font-size:55px">🕯️🎂🎉</div>
-      <h2>تمنّي أمنية يا فاطيما</h2>
-      <p class="subtitle">
-        غمّضي عينك لحظة، وتمنّي حاجة نفسك فيها من قلبك…
-        وربنا يجعل أيامك كلها خير وفرحة.
-      </p>
-      <button class="btn" onclick="makeWish()">
-        تمنّيت أمنيتي ✨
-      </button>
-      <div class="reveal" id="wishReveal">
-        يا رب الأمنية دي تبقى حقيقة، وييجي يوم تفتكريه
-        وتضحكي وتقولي: الحمد لله إنها حصلت ❤️
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <button class="btn" onclick="openFinal()">
-      آخر مفاجأة ليكي يا فاطيما 💝
-    </button>
-  </section>
-
-  <footer>
-    اتعملت بكل الحب من زياد لأخته فاطيما ❤️
-    <br>مش مجرد هدية… دي حتة من قلبي.
-  </footer>
+كل سنة وإنتِ طيبة يا روح أخوكي ❤️</p>
+   <button class="btn" onclick="celebrate()">يلا نحتفل تاني 🎉</button>
+  </div>
+ </section>
+ <footer>اتعملت بحب من زياد لفاطيما ❤️<br>كل سنة وإنتِ أحلى أخت في الدنيا.</footer>
 </main>
 
-<!-- النهاية -->
-<div id="surpriseFinal">
-  <div class="final-card">
-    <div style="font-size:65px">💖🎂👑</div>
-    <h1>كل سنة وإنتِ قلبي</h1>
-    <p>
-      يا فاطيما، لو أقدر أهديكي حاجة أكبر من الكلام،
-      كنت ههديكي أيام حلوة من غير زعل،
-      وقلب مطمّن من غير خوف،
-      وضحكة متفارقش وشك أبدًا.
-      <br><br>
-      إنتِ أختي، ودي واحدة من أجمل النعم اللي ربنا رزقني بيها.
-      <br><br>
-      كل سنة وإنتِ طيبة يا روح أخوكي ❤️
-      <br><br>
-      <strong style="color:#ffda91">من زياد… لأغلى فاطيما في الدنيا.</strong>
-    </p>
-    <button class="btn" onclick="closeFinal()">ارجعي للمفاجأة 💗</button>
-    <button class="btn" onclick="celebrate()">احتفال تاني 🎉</button>
-  </div>
-</div>
-
 <script>
-/* نجوم الخلفية */
-const stars = document.getElementById('stars');
-
-for (let i = 0; i < 75; i++) {
-  const star = document.createElement('span');
-  star.className = 'star';
-  star.textContent = Math.random() > .7 ? '✦' : '·';
-  star.style.left = Math.random() * 100 + '%';
-  star.style.top = Math.random() * 100 + '%';
-  star.style.fontSize = (8 + Math.random() * 14) + 'px';
-  star.style.animationDelay = Math.random() * 3 + 's';
-  stars.appendChild(star);
+const stars=document.getElementById('stars');
+for(let i=0;i<65;i++){
+ const s=document.createElement('span');
+ s.className='star';s.textContent=Math.random()>.5?'✦':'·';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ s.style.fontSize=(8+Math.random()*13)+'px';
+ s.style.animationDelay=Math.random()*3+'s';
+ stars.appendChild(s);
 }
 
-const passwordInput = document.getElementById('password');
-const errorMessage = document.getElementById('error');
-const song = document.getElementById('birthdaySong');
-const songStatus = document.getElementById('songStatus');
+const song=document.getElementById('song');
+const statusText=document.getElementById('songStatus');
 
-function unlockGift() {
-  if (passwordInput.value !== '20102011') {
-    errorMessage.textContent =
-      'الباسورد مش مظبوط يا فاطيما، جرّبي تاني ❤️';
-    passwordInput.value = '';
-    passwordInput.focus();
-    return;
-  }
-
-  errorMessage.textContent = '';
-  const lock = document.getElementById('lockScreen');
-  lock.style.opacity = '0';
-
-  setTimeout(() => {
-    lock.style.display = 'none';
-    document.getElementById('mainContent').style.display = 'block';
-    window.scrollTo(0, 0);
-    celebrate();
-    song.play().then(() => {
-      songStatus.textContent = '🎵 الأغنية شغالة مخصوص عشانك يا فاطيما ❤️';
-    }).catch(() => {
-      songStatus.textContent =
-        '🎵 اضغطي تشغيل الأغنية عشان تبدأ.';
-    });
-  }, 750);
+function unlock(){
+ if(document.getElementById('pass').value!=='20102011'){
+  document.getElementById('err').textContent='جرّبي تاريخ ميلادك تاني يا فاطيما ❤️';
+  return;
+ }
+ document.getElementById('lock').style.display='none';
+ document.getElementById('main').style.display='block';
+ celebrate();
+ song.play().then(()=>{
+  statusText.textContent='الأغنية شغالة مخصوص عشانك 🎵❤️';
+ }).catch(()=>{
+  statusText.textContent='اضغطي زر تشغيل الأغنية لو مبدأتش.';
+ });
 }
-
-document.getElementById('unlockBtn').addEventListener('click', unlockGift);
-
-passwordInput.addEventListener('keydown', event => {
-  if (event.key === 'Enter') unlockGift();
+document.getElementById('pass').addEventListener('keydown',e=>{
+ if(e.key==='Enter')unlock();
 });
 
-function toggleSong() {
-  if (song.paused) {
-    song.play().then(() => {
-      songStatus.textContent = '🎵 الأغنية شغالة ❤️';
-    }).catch(() => {
-      songStatus.textContent =
-        'مش لاقي ملف الأغنية. تأكدي إن kol-sana.mp3 موجود جنب index.html.';
-    });
-  } else {
-    song.pause();
-    songStatus.textContent = 'الأغنية متوقفة مؤقتًا 🎵';
-  }
+function toggleSong(){
+ if(song.paused){
+  song.play().then(()=>statusText.textContent='الأغنية شغالة 🎵❤️')
+  .catch(()=>statusText.textContent='تأكدي إن ملف kol-sana.mp3 مرفوع مع الموقع.');
+ }else{
+  song.pause();statusText.textContent='الأغنية متوقفة مؤقتًا 🎵';
+ }
 }
-
-song.addEventListener('error', () => {
-  songStatus.textContent =
-    'ملف الأغنية مش موجود. ضعي kol-sana.mp3 في نفس مجلد الموقع.';
+song.addEventListener('error',()=>{
+ statusText.textContent='ملف الأغنية مش موجود. ارفعيه باسم kol-sana.mp3 في نفس المستودع.';
 });
 
-function goToLetter() {
-  document.getElementById('letterSection').scrollIntoView({
-    behavior: 'smooth'
-  });
+function showPart2(){
+ document.getElementById('part2').style.display='block';
+ document.querySelector('#part2').scrollIntoView({behavior:'smooth',block:'start'});
+ celebrate();
 }
-
-function reveal(id) {
-  const box = document.getElementById(id);
-  box.style.display = box.style.display === 'block' ? 'none' : 'block';
-  if (box.style.display === 'block') burst(12);
+function reveal(id){
+ const el=document.getElementById(id);
+ el.style.display=el.style.display==='block'?'none':'block';
+ if(el.style.display==='block')celebrate(8);
 }
-
-function makeWish() {
-  document.getElementById('wishReveal').style.display = 'block';
-  burst(35);
+function wish(){
+ document.getElementById('wishText').style.display='block';
+ celebrate(25);
 }
-
-function openFinal() {
-  document.getElementById('surpriseFinal').style.display = 'flex';
-  burst(55);
-}
-
-function closeFinal() {
-  document.getElementById('surpriseFinal').style.display = 'none';
-}
-
-function floatingEmoji(emoji) {
-  const el = document.createElement('div');
-  el.className = 'floating';
-  el.textContent = emoji;
-  el.style.left = Math.random() * 95 + '%';
-  el.style.fontSize = (18 + Math.random() * 25) + 'px';
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), 3600);
-}
-
-function burst(count = 25) {
-  const emojis = ['💖', '✨', '💕', '🌟', '💗', '🎉'];
-  for (let i = 0; i < count; i++) {
-    setTimeout(() => {
-      floatingEmoji(emojis[Math.floor(Math.random() * emojis.length)]);
-    }, i * 55);
-  }
-}
-
-function celebrate() {
-  burst(35);
+function celebrate(n=24){
+ const emojis=['💖','💕','✨','🌟','🎉','💗'];
+ for(let i=0;i<n;i++){
+  setTimeout(()=>{
+   const el=document.createElement('span');
+   el.className='floaty';
+   el.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+   el.style.left=Math.random()*95+'%';
+   el.style.fontSize=(18+Math.random()*22)+'px';
+   document.body.appendChild(el);
+   setTimeout(()=>el.remove(),3100);
+  },i*60);
+ }
 }
 </script>
-
 </body>
-  </html>
-
+</html>
